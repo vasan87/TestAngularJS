@@ -1,0 +1,46 @@
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>
+<body >
+
+<div ng-app="mainApp" ng-controller="Test">
+<p>
+List of Sections
+
+ <input type="checkbox" ng-model="stores.Grocery"> Grocery
+ <input type="checkbox" ng-model="stores.Health"> Health
+ <input type="checkbox" ng-model="stores.Office"> Office
+ <input type="checkbox" ng-model="stores.Home"> Home Appliances
+ <input type="checkbox" ng-model="stores.Dresses"> Dresses
+ <input type="checkbox" ng-model="stores.Foods"> Foods/Snacks
+ 	<p>Dept : <input type="text" ng-model="stores.Dept">
+	<br>
+Class: <input type="text" ng-model="stores.Class">
+<br>
+Item: <input type="text" ng-model="stores.Item">
+<br>
+	
+	</p>
+{{stores.Append() | uppercase}}
+
+</div>
+<script>
+  var main = angular.module("mainApp", []);
+ main.controller('Test',function($scope) {
+      $scope.stores = {
+         Dept: "Dept",
+         Class: "Class",
+         Item:"Item",
+         Append: function() {
+            var DPCI;
+            DPCI = $scope.stores;
+            return DPCI.Dept + " " + DPCI.Class + " " + DPCI.Item;
+         }
+      };
+	  });
+   	
+
+</script>
+
+</body>
+</html>
