@@ -1,2 +1,2 @@
 # TestAngularJS
-Developing &amp; Testing sample Apps in Angular JS
+Developing &amp; Testing sample Apps in Angular JS...
